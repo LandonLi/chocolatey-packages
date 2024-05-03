@@ -2,18 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qbittorrent-enhanced</id>
-    <version>4.4.4.10</version>
-    <packageSourceUrl>https://github.com/iYato/chocolatey-packages/tree/master/qbittorrent-enhanced</packageSourceUrl>
-    <owners>Yato</owners>
+    <version>4.6.4.10</version>
+    <packageSourceUrl>https://github.com/LandonLi/chocolatey-packages/tree/master/qbittorrent-enhanced</packageSourceUrl>
+    <owners>LandonLi</owners>
     <title>qbittorrent-enhanced (Install)</title>
     <authors>c0re100</authors>
     <projectUrl>https://github.com/c0re100/qBittorrent-Enhanced-Edition</projectUrl>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/qbittorrent-enhanced.png</iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->
-    <licenseUrl>https://github.com/c0re100/qBittorrent-Enhanced-Edition/blob/v4_2_x/COPYING</licenseUrl>
+    <licenseUrl>https://github.com/c0re100/qBittorrent-Enhanced-Edition/blob/v4_6_x/COPYING</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/c0re100/qBittorrent-Enhanced-Edition</projectSourceUrl>
-    <docsUrl>https://github.com/c0re100/qBittorrent-Enhanced-Edition/blob/v4_2_x/README.md</docsUrl>
+    <docsUrl>https://github.com/c0re100/qBittorrent-Enhanced-Edition/blob/v4_6_x/README.md</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/c0re100/qBittorrent-Enhanced-Edition/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc</bugTrackerUrl>
     <tags>qbittorrent-enhanced torrent p2p qbittorrent</tags>
@@ -21,7 +21,7 @@
     <description><![CDATA[
 [Unofficial] qBittorrent BitTorrent client (Enhanced Edition)
 
-More description at [README](https://github.com/c0re100/qBittorrent-Enhanced-Edition/blob/v4_2_x/README.md)
+More description at [README](https://github.com/c0re100/qBittorrent-Enhanced-Edition/blob/v4_6_x/README.md)
 ]]></description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!--<dependencies>
