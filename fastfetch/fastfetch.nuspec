@@ -1,0 +1,33 @@
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>fastfetch</id>
+    <version>2.11.5</version>
+    <packageSourceUrl>https://github.com/LandonLi/chocolatey-packages/tree/master/fastfetch</packageSourceUrl>
+    <title>fastfetch (Install)</title>
+    <authors>LinusDierheimer,CarterLi</authors>
+    <projectUrl>https://github.com/fastfetch-cli/fastfetch</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/fastfetch.png</iconUrl>-->
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/fastfetch-cli/fastfetch/blob/dev/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/fastfetch-cli/fastfetch</projectSourceUrl>
+    <docsUrl>https://github.com/fastfetch-cli/fastfetch/wiki</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/fastfetch-cli/fastfetch/issues</bugTrackerUrl>
+    <tags>fastfetch neofetch screenfetch commandline cli systeminfo info</tags>
+    <summary>Like neofetch, but much faster because written mostly in C.</summary>
+    <description>Fastfetch is a neofetch-like tool for fetching system information and displaying them in a pretty way. It is written mainly in C, with performance and customizability in mind. Currently, Linux, Android, FreeBSD, MacOS and Windows 7+ are supported.</description>
+    <releaseNotes>https://github.com/fastfetch-cli/fastfetch/blob/dev/CHANGELOG.md</releaseNotes>
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
