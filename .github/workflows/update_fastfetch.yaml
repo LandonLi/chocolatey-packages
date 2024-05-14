@@ -1,4 +1,4 @@
-name: CI
+name: update_fastfetch
 
 on:
   schedule:
@@ -12,15 +12,13 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
-      - name: Install AU
-        shell: pwsh
-        run: |
-          Set-PSRepository PSGallery -InstallationPolicy Trusted
-          Install-Module AU
       - name: Update code by AU
         shell: pwsh
         working-directory: fastfetch
-        run: ./update.ps1
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module AU
+          ./update.ps1
       - name: Get new version
         id: version
         run: |
