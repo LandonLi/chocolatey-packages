@@ -22,8 +22,8 @@ jobs:
       - name: Get new version
         id: version
         run: |
-          $latestRelease = ((Invoke-WebRequest -Uri "https://api.github.com/repos/fastfetch-cli/fastfetch/releases" -UseBasicParsing).Content | ConvertFrom-Json)[0]
-          "latest=$latestRelease.name" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          $latestRelease = ((Invoke-WebRequest -Uri "https://api.github.com/repos/fastfetch-cli/fastfetch/releases" -UseBasicParsing).Content | ConvertFrom-Json)[0].name
+          "latest=$latestRelease" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
