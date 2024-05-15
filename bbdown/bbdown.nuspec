@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>bbdown</id>
+    <version>1.6.2</version>
+    <packageSourceUrl>https://github.com/LandonLi/chocolatey-packages/tree/master/bbdown</packageSourceUrl>
+    <title>bbdown (Install)</title>
+    <authors>nilaoda</authors>
+    <projectUrl>https://github.com/nilaoda/BBDown</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/bbdown.png</iconUrl>-->
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/nilaoda/BBDown/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/nilaoda/BBDown</projectSourceUrl>
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>bbdown bilibili downloader video-downloader</tags>
+    <summary>Bilibili Downloader. 一款命令行式哔哩哔哩下载器.</summary>
+    <description>一款命令行式哔哩哔哩下载器. Bilibili Downloader.</description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <dependencies>
+      <dependency id="ffmpeg" version="5.0" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
