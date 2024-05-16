@@ -20,8 +20,8 @@
     <description>一款命令行式哔哩哔哩下载器. Bilibili Downloader.</description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <dependencies>
+      <dependency id="dotnet-desktopruntime" version="8.0.0" />
       <dependency id="ffmpeg" version="5.0" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>
   </metadata>
   <files>
