@@ -4,6 +4,7 @@
     <id>bbdown</id>
     <version>1.6.2</version>
     <packageSourceUrl>https://github.com/LandonLi/chocolatey-packages/tree/master/bbdown</packageSourceUrl>
+    <owners>LandonLi</owners>
     <title>bbdown (Install)</title>
     <authors>nilaoda</authors>
     <projectUrl>https://github.com/nilaoda/BBDown</projectUrl>
@@ -17,7 +18,7 @@
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>bbdown bilibili downloader video-downloader</tags>
     <summary>Bilibili Downloader. 一款命令行式哔哩哔哩下载器.</summary>
-    <description>一款命令行式哔哩哔哩下载器. Bilibili Downloader.</description>
+    <description>BBDown is a command line video downloader, similar to yt-dlp but designed for www.bilibili.com. (It supports danmaku downloads, which yt-dlp does not.)</description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <dependencies>
       <dependency id="dotnet-desktopruntime" version="8.0.0" />
