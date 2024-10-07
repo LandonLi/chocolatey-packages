@@ -8,7 +8,7 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   url           = $url
   softwareName  = 'fastfetch*'
-  checksum      = 'DAC217B988A41B29506047B0EEBE25800D75D23C75692BE784CB66D1F2FF657D'
+  checksum      = 'CC932106EEED5BE4369F7D6654DE7130D4AFFBB1074301ACF3EACAE2E3CC3ACF'
   checksumType  = 'sha256'
 }
 
