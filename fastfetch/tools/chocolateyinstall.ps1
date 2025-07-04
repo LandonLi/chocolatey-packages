@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/fastfetch-cli/fastfetch/releases/download/2.46.0/fastfetch-windows-amd64.zip'
+$url        = 'https://github.com/fastfetch-cli/fastfetch/releases/download/2.47.0/fastfetch-windows-amd64.zip'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   url           = $url
   softwareName  = 'fastfetch*'
-  checksum      = 'A9F089EA29EBC7BBC6F58C6CD3FEEFA9913879BC755CF346A87D5AAC8CE0A2C7'
+  checksum      = '30816545E27CDFE8951E264D4520C7B759E9755E17091EEA0A58A9EB2B230EFD'
   checksumType  = 'sha256'
 }
 
