@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$url64 = 'https://github.com/nxtrace/NTrace-core/releases/download/v1.4.2/nexttrace_windows_amd64.exe'
-$Checksum64 = '3cfa6f8675690c208e4d0400cb9f247e1678099a6e9ad114e2a6c00e5b95f351'
+$url64 = 'https://github.com/nxtrace/NTrace-core/releases/download/v1.5.0/nexttrace_windows_amd64.exe'
+$Checksum64 = 'a728dc33dd3409acebe346f844562e0de2603e9734f9a050b53a0ea6dc847c44'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
