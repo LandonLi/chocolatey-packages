@@ -52,13 +52,19 @@ jobs:
       - name: Update Version in Code
         shell: pwsh
         working-directory: ${{ matrix.software }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           Import-Module AU
           ./update.ps1
       - name: Get Software Latest Version
         id: version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          $latestVersion = ((Invoke-WebRequest -Uri "https://api.github.com/repos/${{ matrix.repo }}/releases/latest" -UseBasicParsing).Content | ConvertFrom-Json).tag_name.TrimStart("${{ matrix.trimstart}}")
+          $headers = @{}
+          if ($env:GITHUB_TOKEN) { $headers["Authorization"] = "token $env:GITHUB_TOKEN" }
+          $latestVersion = ((Invoke-WebRequest -Uri "https://api.github.com/repos/${{ matrix.repo }}/releases/latest" -UseBasicParsing -Headers $headers).Content | ConvertFrom-Json).tag_name.TrimStart("${{ matrix.trimstart}}")
           "latest=$latestVersion" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       - name: Create Pull Request
         id: cpr

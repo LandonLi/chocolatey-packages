@@ -4,7 +4,7 @@ $releases = "https://api.github.com/repos/fastfetch-cli/fastfetch/releases/lates
 $file = "fastfetch-windows-amd64.zip"
 
 function global:au_GetLatest {
-    $latestRelease = ((Invoke-WebRequest -Uri $releases -UseBasicParsing).Content | ConvertFrom-Json)
+    $latestRelease = ((Invoke-WebRequest -Uri $releases -UseBasicParsing -Headers (if ($env:GITHUB_TOKEN) { @{ Authorization = "token $env:GITHUB_TOKEN" } } else { @{} })).Content | ConvertFrom-Json)
     $version = $latestRelease.name
     $checkSumPattern = "([0-9a-z]{64})\s+.+\/$file"
     $checkSum = (($latestRelease.body | Select-String -Pattern $checkSumPattern).Matches.Value -split "\s+")[0].ToUpper()

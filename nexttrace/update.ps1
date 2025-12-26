@@ -3,7 +3,7 @@ Import-Module au
 $releases = "https://api.github.com/repos/nxtrace/NTrace-core/releases/latest"
 
 function global:au_GetLatest {
-    $latestRelease = ((Invoke-WebRequest -Uri $releases -UseBasicParsing).Content | ConvertFrom-Json)
+    $latestRelease = ((Invoke-WebRequest -Uri $releases -UseBasicParsing -Headers (if ($env:GITHUB_TOKEN) { @{ Authorization = "token $env:GITHUB_TOKEN" } } else { @{} })).Content | ConvertFrom-Json)
     $version = $latestRelease.tag_name.TrimStart("v")
     $url = ($latestRelease.assets | Where-Object -Property name -match "windows_amd64").browser_download_url
     return @{ Version = $version; URL64 = $url }
