@@ -7,7 +7,7 @@ function global:au_GetLatest {
     if ($env:GITHUB_TOKEN) { $headers.Authorization = "token $env:GITHUB_TOKEN" }
     $latestRelease = ((Invoke-WebRequest -Uri $releases -UseBasicParsing -Headers $headers).Content | ConvertFrom-Json)
     $version = $latestRelease.tag_name.TrimStart("v")
-    $url = ($latestRelease.assets | Where-Object -Property name -match "windows_amd64").browser_download_url
+    $url = ($latestRelease.assets | Where-Object -Property name -match "^nexttrace_windows_amd64").browser_download_url
     return @{ Version = $version; URL64 = $url }
 }
 
