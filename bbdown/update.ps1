@@ -3,7 +3,9 @@ Import-Module au
 $releases = "https://api.github.com/repos/nilaoda/BBDown/releases/latest"
 
 function global:au_GetLatest {
-    $latestRelease = ((Invoke-WebRequest -Uri $releases -UseBasicParsing -Headers (if ($env:GITHUB_TOKEN) { @{ Authorization = "token $env:GITHUB_TOKEN" } } else { @{} })).Content | ConvertFrom-Json)
+    $headers = @{}
+    if ($env:GITHUB_TOKEN) { $headers.Authorization = "token $env:GITHUB_TOKEN" }
+    $latestRelease = ((Invoke-WebRequest -Uri $releases -UseBasicParsing -Headers $headers).Content | ConvertFrom-Json)
     $version = $latestRelease.tag_name
     $url = ($latestRelease.assets | Where-Object -Property name -match "win-x64").browser_download_url
     return @{ Version = $version; URL64 = $url }
