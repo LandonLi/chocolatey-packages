@@ -28,6 +28,7 @@ jobs:
     needs: prepare
     runs-on: windows-latest
     strategy:
+      fail-fast: false
       matrix:
         include:
           - software: fastfetch
